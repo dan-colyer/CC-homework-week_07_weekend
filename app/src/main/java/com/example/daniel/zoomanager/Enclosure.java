@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Enclosure <T extends Animal> {
 
-    ArrayList<T> animals;
+    private ArrayList<T> animals;
 
     public Enclosure() {
         this.animals = new ArrayList<T>();
@@ -16,6 +16,14 @@ public class Enclosure <T extends Animal> {
 
     public void add(T animal) {
         this.animals.add(animal);
+    }
+
+    public int getNumberOfAnimals() {
+        return animals.size();
+    }
+
+    public void remove(T animal) {
+        this.animals.remove(animal);
     }
 }
 

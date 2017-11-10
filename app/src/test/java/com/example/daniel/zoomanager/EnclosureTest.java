@@ -36,21 +36,29 @@ public class EnclosureTest {
     // Test 1
     @Test
     public void testEnclosureStartsEmpty() {
-        assertEquals(0, enclosurePygmyHippos.animals.size());
-        assertEquals(0, enclosurePolarBears.animals.size());
-        assertEquals(0, enclosureChickens.animals.size());
+        assertEquals(0, enclosurePygmyHippos.getNumberOfAnimals());
+        assertEquals(0, enclosurePolarBears.getNumberOfAnimals());
+        assertEquals(0, enclosureChickens.getNumberOfAnimals());
     }
 
     // Test 2
     @Test
     public void testAdd() {
         enclosurePygmyHippos.add(pygmyHippo);
-        assertEquals(1, enclosurePygmyHippos.animals.size());
+        assertEquals(1, enclosurePygmyHippos.getNumberOfAnimals());
 
         enclosurePolarBears.add(polarBear);
-        assertEquals(1, enclosurePolarBears.animals.size());
+        assertEquals(1, enclosurePolarBears.getNumberOfAnimals());
 
         enclosureChickens.add(chicken);
-        assertEquals(1, enclosureChickens.animals.size());
+        assertEquals(1, enclosureChickens.getNumberOfAnimals());
+    }
+
+    // Test 3
+    @Test
+    public void testRemove() {
+        enclosurePygmyHippos.add(pygmyHippo);
+        enclosurePygmyHippos.remove(pygmyHippo);
+        assertEquals(0, enclosurePygmyHippos.getNumberOfAnimals());
     }
 }
