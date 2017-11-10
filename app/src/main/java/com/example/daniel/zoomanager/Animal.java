@@ -5,8 +5,8 @@ package com.example.daniel.zoomanager;
  */
 
 public abstract class Animal {
-    public String name;
-    public double cashValue;
+    private String name;
+    private double cashValue;
 
     public Animal(String name, double cashValue) {
         this.name = name;
