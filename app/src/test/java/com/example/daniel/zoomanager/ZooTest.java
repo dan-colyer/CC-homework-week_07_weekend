@@ -36,4 +36,12 @@ public class ZooTest {
         assertEquals(0, zoo.getNumberOfEnclosures());
     }
 
+    // Test 3
+    public void testAddEnclosure() {
+        enclosureChickens.add(chicken1);
+        enclosureChickens.add(chicken2);
+        zoo.addEnclosure(enclosureChickens);
+        assertEquals(1, zoo.getNumberOfEnclosures());
+    }
+
 }

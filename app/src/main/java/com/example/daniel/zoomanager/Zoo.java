@@ -24,6 +24,10 @@ public class Zoo {
     public int getNumberOfEnclosures() {
         return this.enclosures.size();
     }
+
+    public void addEnclosure(Enclosure enclosure) {
+        this.enclosures.add(enclosure);
+    }
 }
 
 //    A Zoo should have a collection of generic Enclosures that can take Animals of any particular type. An Enclosure should only be able to hold Animals of one type.
