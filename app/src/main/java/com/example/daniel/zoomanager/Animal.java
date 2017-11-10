@@ -12,4 +12,8 @@ public abstract class Animal {
         this.name = name;
         this.cash_value = cash_value;
     }
+
+    public String getName() {
+        return name;
+    }
 }
