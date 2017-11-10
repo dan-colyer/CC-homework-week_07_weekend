@@ -6,14 +6,18 @@ package com.example.daniel.zoomanager;
 
 public abstract class Animal {
     public String name;
-    public double cash_value;
+    public double cashValue;
 
-    public Animal(String name, double cash_value) {
+    public Animal(String name, double cashValue) {
         this.name = name;
-        this.cash_value = cash_value;
+        this.cashValue = cashValue;
     }
 
     public String getName() {
         return name;
+    }
+
+    public double getCashValue() {
+        return cashValue;
     }
 }

@@ -18,8 +18,15 @@ public class PygmyHippoTest {
         pygmyHippo = new PygmyHippo("Mavis Davis", 18000.00);
     }
 
+    // Test1
     @Test
     public void testGetName() {
         assertEquals("Mavis Davis", pygmyHippo.getName());
+    }
+
+    // Test2
+    @Test
+    public void testGetCashValue() {
+        assertEquals(18000.00, pygmyHippo.getCashValue(), 0.01);
     }
 }
