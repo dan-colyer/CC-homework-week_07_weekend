@@ -24,13 +24,13 @@ public class EnclosureTest {
     @Before
     public void before() {
         pygmyHippo = new PygmyHippo("Gloria Gaynor", 18000.00);
-        enclosurePygmyHippos = new Enclosure<PygmyHippo>();
+        enclosurePygmyHippos = new Enclosure<>();
 
         polarBear = new PolarBear("Diana Ross", 40000.00);
-        enclosurePolarBears = new Enclosure<PolarBear>();
+        enclosurePolarBears = new Enclosure<>();
 
         chicken = new Chicken("Hetty", 6.00);
-        enclosureChickens = new Enclosure<Chicken>();
+        enclosureChickens = new Enclosure<>();
     }
 
     // Test 1
@@ -60,5 +60,13 @@ public class EnclosureTest {
         enclosurePygmyHippos.add(pygmyHippo);
         enclosurePygmyHippos.remove(pygmyHippo);
         assertEquals(0, enclosurePygmyHippos.getNumberOfAnimals());
+
+        enclosurePolarBears.add(polarBear);
+        enclosurePolarBears.remove(polarBear);
+        assertEquals(0, enclosurePolarBears.getNumberOfAnimals());
+
+        enclosureChickens.add(chicken);
+        enclosureChickens.remove(chicken);
+        assertEquals(0, enclosureChickens.getNumberOfAnimals());
     }
 }

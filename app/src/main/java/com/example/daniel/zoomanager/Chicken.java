@@ -9,3 +9,4 @@ public class Chicken extends Animal {
         super(name, cashValue);
     }
 }
+
