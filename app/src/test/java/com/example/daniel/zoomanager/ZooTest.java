@@ -32,16 +32,38 @@ public class ZooTest {
     }
 
     // Test 2
+    @Test
     public void testEnclosuresStartEmpty() {
         assertEquals(0, zoo.getNumberOfEnclosures());
     }
 
     // Test 3
+    @Test
     public void testAddEnclosure() {
         enclosureChickens.add(chicken1);
         enclosureChickens.add(chicken2);
         zoo.addEnclosure(enclosureChickens);
         assertEquals(1, zoo.getNumberOfEnclosures());
     }
+
+    // Test 4
+    @Test
+    public void testRemoveEnclosure() {
+        enclosureChickens.add(chicken1);
+        enclosureChickens.add(chicken2);
+        zoo.addEnclosure(enclosureChickens);
+        zoo.removeEnclosure(enclosureChickens);
+        assertEquals(0, zoo.getNumberOfEnclosures());
+    }
+
+    // Test 5
+    @Test
+    public void testCountAnimals() {
+        enclosureChickens.add(chicken1);
+        enclosureChickens.add(chicken2);
+        zoo.addEnclosure(enclosureChickens);
+        assertEquals(2, zoo.countAnimals());
+    }
+
 
 }

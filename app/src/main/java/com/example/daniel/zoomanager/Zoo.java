@@ -6,10 +6,10 @@ import java.util.ArrayList;
  * Created by Daniel on 10/11/2017.
  */
 
-public class Zoo {
+public class Zoo<E extends Enclosure> {
 
     private double funds;
-    private ArrayList<Enclosure> enclosures;
+    private ArrayList<E> enclosures;
 
     public Zoo() {
         this.funds = 0.00;
@@ -25,10 +25,23 @@ public class Zoo {
         return this.enclosures.size();
     }
 
-    public void addEnclosure(Enclosure enclosure) {
+    public void addEnclosure(E enclosure) {
         this.enclosures.add(enclosure);
     }
+
+    public void removeEnclosure(E enclosure) {
+        this.enclosures.remove(enclosure);
+    }
+
+    public int countAnimals() {
+        int total = 0;
+        for (E enclosure : enclosures) {
+            total =+ enclosure.getNumberOfAnimals();
+        }
+        return total;
+    }
 }
+
 
 //    A Zoo should have a collection of generic Enclosures that can take Animals of any particular type. An Enclosure should only be able to hold Animals of one type.
 //
