@@ -31,4 +31,9 @@ public class ZooTest {
         assertEquals(0.00, zoo.getFunds(), 0.01);
     }
 
+    // Test 2
+    public void testEnclosuresStartEmpty() {
+        assertEquals(0, zoo.getNumberOfEnclosures());
+    }
+
 }
